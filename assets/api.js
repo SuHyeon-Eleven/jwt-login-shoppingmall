@@ -42,6 +42,7 @@ function getSelf(callback) {
       if (status == 401) {
         alert("로그인이 필요합니다.");
       } else {
+        console.log('users/me 에서 문제 시바');
         localStorage.clear();
         alert("알 수 없는 문제가 발생했습니다. 관리자에게 문의하세요.");
       }
@@ -82,6 +83,7 @@ function getGoodsDetail(goodsId, callback) {
       } else if (status == 404) {
         alert("존재하지 않는 상품입니다.");
       } else {
+        console.log("장바구니 오류 시바");
         alert("알 수 없는 문제가 발생했습니다. 관리자에게 문의하세요.");
       }
       window.location.href = "/goods";
